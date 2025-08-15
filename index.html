@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sanjay Kumar Engineering Works</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', sans-serif; }
+
+    .service-box,
+    .project-box {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-box:hover,
+    .project-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .client-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .client-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .client-logo {
+      width: 60px;
+      height: auto;
+    }
+
+    a:hover i {
+      filter: brightness(0.85);
+    }
+
+    /* Gallery slider styles */
+    #gallery .row.g-4 {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      width: 100%;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 10px;
+      gap: 1.5rem;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    #gallery .col-md-3 {
+      min-width: 25%;
+      flex-shrink: 0;
+      flex-grow: 0;
+      flex-basis: auto;
+      scroll-snap-align: start;
+    }
+
+    .project-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand text-warning fw-bold" href="#home">Sanjay Kumar Engineering Works</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link fw-bold text-white" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold text-white" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold text-white" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold text-white" href="#gallery">Projects</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold text-white" href="#clients">Our Clients</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="text-white text-center py-5" style="background: url('images/img1.jpg') center/cover no-repeat;">
+    <div class="container py-5">
+      <h1 class="display-4 fw-bold">SANJAY KUMAR ENGINEERING WORKS</h1>
+      <p class="lead">Delivering Quality with Quantity</p>
+      <a href="#clients" class="btn btn-warning btn-lg mt-3">Wel Come</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="container py-5">
+    <h2 class="mb-4 text-center fw-bold">About Us</h2>
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <p style="font-size: 1.05rem;">
+          <strong>Sanjay Kumar Engineering Works</strong> has been proudly working since <strong>1998</strong>, providing 
+          <strong>reliable civil and electrical services</strong>.
+          <br><br>
+          Founded by <strong>Sanjay Kumar</strong> and <strong>Abhay Kumar</strong>, we are known for our 
+          <strong>honest work, long experience</strong>, and dedication to customer satisfaction.
+        </p>
+        <p style="font-size: 1.05rem;"><strong>Our Services include:</strong></p>
+        <ul style="font-size: 1.05rem;">
+          <li><strong>Civil foundation work</strong> Light and Poles.</li>
+          <li><strong>High mast, Stadium Light, and Flag mast installation</strong> (up to 110 meters).</li>
+          <li><strong>Street light and Solar light foundation and Erection.</strong></li>
+          <li><strong>Canopy light installation</strong> for Petrol pumps and Factories.</li>
+        </ul>
+        <p style="font-size: 1.05rem;">
+          We are a <strong>registered contractor</strong> focused on <strong>Safety, Quality, and Timely delivery</strong>.
+          Our goal is to offer the best service across <strong>Bihar, West Bengal, Uttar Pradesh</strong>, and nearby areas — 
+          known for our <strong>Quality, Trust, and Affordable Pricing</strong>.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="images/Eng.jpg" class="img-fluid rounded shadow" alt="Engineer">
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="bg-light py-5 text-center">
+    <div class="container">
+      <h2 class="mb-4">Our Services</h2>
+      <div class="row g-4">
+        <div class="col-md-3 col-sm-6 service-box p-3 rounded bg-white shadow-sm" style="background: linear-gradient(135deg, #1e3c72, #2a5298); color: white;">
+          <i class="bi bi-gear-fill display-5"></i>
+          <h6 class="mt-2">Civil Foundation</h6>
+        </div>
+        <div class="col-md-3 col-sm-6 service-box p-3 rounded bg-white shadow-sm" style="background: linear-gradient(135deg, #ff5f6d, #ffc371); color: white;">
+          <i class="bi bi-tools display-5"></i>
+          <h6 class="mt-2">Highmast & Flagmast</h6>
+        </div>
+        <div class="col-md-3 col-sm-6 service-box p-3 rounded bg-white shadow-sm" style="background: linear-gradient(135deg, #36d1dc, #5b86e5); color: white;">
+          <i class="bi bi-brightness-high-fill display-5"></i>
+          <h6 class="mt-2">Street & Solar Light Foundation</h6>
+        </div>
+        <div class="col-md-3 col-sm-6 service-box p-3 rounded bg-white shadow-sm" style="background: linear-gradient(135deg, #ff9966, #ff5e62); color: white;">
+          <i class="bi bi-lightbulb-fill display-5"></i>
+          <h6 class="mt-2">Canopy Light Installation</h6>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="container py-5 text-center">
+    <h2 class="mb-4">Projects</h2>
+    <div class="row g-4">
+      <div class="col-md-3 col-sm-6 project-box"><img src="images/img10.jpg" class="img-fluid rounded shadow" alt="Project 1"></div>
+      <div class="col-md-3 col-sm-6 project-box"><img src="images/img11.jpg" class="img-fluid rounded shadow" alt="Project 2"></div>
+      <div class="col-md-3 col-sm-6 project-box"><img src="images/img4.jpg" class="img-fluid rounded shadow" alt="Project 3"></div>
+      <div class="col-md-3 col-sm-6 project-box"><img src="images/img8.jpg" class="img-fluid rounded shadow" alt="Project 4"></div>
+      <div class="col-md-3 col-sm-6 project-box"><img src="images/img22.jpg" class="img-fluid rounded shadow" alt="Project 5"></div>
+      <div class="col-md-3 col-sm-6 project-box"><img src="images/img23.jpg" class="img-fluid rounded shadow" alt="Project 6"></div>
+      <div class="col-md-3 col-sm-6 project-box"><img src="images/img24.jpg" class="img-fluid rounded shadow" alt="Project 7"></div>
+      <div class="col-md-3 col-sm-6 project-box"><img src="images/img25.jpg" class="img-fluid rounded shadow" alt="Project 8"></div>
+    </div>
+  </section>
+
+  <!-- Clients -->
+  <section id="clients" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-4 fw-bold">Our Clients</h2>
+      <div class="row justify-content-center g-4">
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card p-4 rounded text-white" style="background: linear-gradient(135deg, #1e3c72, #2a5298);">
+            <img src="images/bajaj.png" alt="Bajaj" class="client-logo mb-2">
+            <h6 class="mb-0">Bajaj Electrical Limited</h6>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card p-4 rounded text-white" style="background: linear-gradient(135deg, #ff5f6d, #ffc371);">
+            <img src="images/trans.jpg" alt="Transrail" class="client-logo mb-2">
+            <h6 class="mb-0">Transrail Lighting Limited</h6>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card p-4 rounded text-white" style="background: linear-gradient(135deg, #36d1dc, #5b86e5);">
+            <img src="images/Larsen-Toubro-Logo-Vector.jpg" alt="L&T" class="client-logo mb-2">
+            <h6 class="mb-0">L&T</h6>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card p-4 rounded text-white" style="background: linear-gradient(135deg, #ff9966, #ff5e62);">
+            <img src="images/HPL-logo.webp" alt="HPL" class="client-logo mb-2">
+            <h6 class="mb-0">HPL Electric and Power Limited</h6>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card p-4 rounded text-white" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+            <img src="images/ntpc.png" alt="NTPC" class="client-logo mb-2">
+            <h6 class="mb-0">NTPC</h6>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card p-4 rounded text-white" style="background: linear-gradient(135deg, #43cea2, #185a9d);">
+            <img src="images/logo_126923.jpg" alt="NTPC Kahalgaon" class="client-logo mb-2">
+            <h6 class="mb-0">Bengal poles</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Footer Section -->
+  <section class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-3 mb-4 mb-md-0">
+          <h5>Our Address</h5>
+          <p>Near Lakhminia Station, TVS Agency <br>Pokhar Road, Ballia- Lakhminia<br>Begusarai, Bihar - 851211</p>
+        </div>
+        <div class="col-md-3 mb-4 mb-md-0">
+          <h5>Location</h5>
+          <iframe src="https://maps.google.com/maps?q=25.426018879411895,86.30970374495472&z=15&output=embed" width="100%" height="100" style="border:0;" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-3 mb-4 mb-md-0">
+          <h5>Follow Us</h5>
+          <a href="https://www.facebook.com/share/196zrhyH5r/?mibextid=wwXIfr" target="_blank" class="me-2" style="color: #1877F2;"><i class="bi bi-facebook fs-3"></i></a>
+          <a href="https://wa.me/919060498392" target="_blank" class="me-2" style="color: #25D366;"><i class="bi bi-whatsapp fs-3"></i></a>
+          <a href="https://https://www.instagram.com/sanjaykumarengineeringworks?igsh=ZjdwcHVsMmRoZjI4&utm_source=qr" target="_blank" style="color: #E1306C;"><i class="bi bi-instagram fs-3"></i></a>
+        </div>
+        <div class="col-md-3">
+          <h5>Call Us</h5>
+          <p><a href="tel:9060498392" class="text-white text-decoration-none" style="font-weight: 500; font-size: 1rem;">9060498392 &nbsp; | &nbsp; 9934454277</a></p>
+          <p class="text-white" style="font-weight: 500; font-size: 1rem;">Skengineeringwrk@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    &copy; Designed and Developed By Abhijit (Ajit).
+    <br> 📞 9534407602 
+    <br> 📩 kumarabhijit018@gmail.com
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    console.log('Final site loaded');
+    console.log('Website loaded');
+    history.replaceState(null, null, 'index.html');
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const container = document.querySelector("#gallery .row.g-4");
+      if (!container) return;
+
+      const items = container.children;
+      const itemCount = items.length;
+      if (itemCount === 0) return;
+
+      const itemStyle = getComputedStyle(items[0]);
+      const itemWidth = items[0].offsetWidth + parseInt(itemStyle.marginRight);
+
+      let scrollPosition = 0;
+
+      setInterval(() => {
+        scrollPosition += itemWidth;
+        if (scrollPosition >= itemWidth * itemCount) {
+          scrollPosition = 0;
+        }
+        container.scrollTo({
+          left: scrollPosition,
+          behavior: 'smooth'
+        });
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
